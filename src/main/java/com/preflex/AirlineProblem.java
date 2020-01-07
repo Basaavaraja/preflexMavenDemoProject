@@ -1,5 +1,9 @@
 package com.preflex;
-
+/**
+ * Java Class to Determine if airlines can be moved from
+ * airline to another based on network of airline partners
+ * @author
+ */
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
@@ -35,6 +39,7 @@ public class AirlineProblem {
             System.out.print("Enter airline miles are on: ");
             String start = keyboard.nextLine();
             System.out.print("Enter goal airline: ");
+            System.out.println("***");
             String goal = keyboard.nextLine();
             ArrayList<String> pathForMiles = new ArrayList<String>();
             ArrayList<String> airlinesVisited = new ArrayList<String>();
