@@ -2,10 +2,9 @@ package com.preflex;
 /**
  * Java Class to Determine if airlines can be moved from
  * airline to another based on network of airline partners
- *
+ * Note
  * @author
  */
-
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -13,14 +12,9 @@ import java.util.Scanner;
 
 public class AirlineProblem {
 
-
-    //public static void main(String[] args)
     public static void main(String[] args) {
-
-    }{
         Scanner scannerToReadAirlines = null;
         try {
-
             scannerToReadAirlines = new Scanner(new File("airlines.txt"));
         } catch (IOException e) {
             System.out.println("Could not connect to file airlines.txt.");
@@ -43,15 +37,15 @@ public class AirlineProblem {
             System.out.print("Enter airline miles are on: ");
             String start = keyboard.nextLine();
             System.out.print("Enter goal airline: ");
-            System.out.println("***");
             String goal = keyboard.nextLine();
-            ArrayList<String> pathForMiles = new ArrayList<String>();
+            System.out.println();
+            System.out.println();
+           ArrayList<String> pathForMiles = new ArrayList<String>();
             ArrayList<String> airlinesVisited = new ArrayList<String>();
             if (canRedeem(start, goal, pathForMiles, airlinesVisited, airlinesPartnersNetwork))
                 System.out.println("Path to redeem miles: " + pathForMiles);
             else
                 System.out.println("Cannot convert miles from " + start + " to " + goal + ".");
-
         }
     }
 
