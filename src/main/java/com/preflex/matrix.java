@@ -1,7 +1,6 @@
 package com.preflex;
 
-
-public class AirlineProblem {
+public class matrix {
 
     public static void main(String[] args) {
         int r1 = 2, c1 = 3;
@@ -29,3 +28,4 @@ public class AirlineProblem {
         }
     }
 }
+
