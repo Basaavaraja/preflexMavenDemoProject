@@ -1,8 +1,9 @@
-package com.refactor;
+package com.preflex;
 
 public class Complex {
     double real;
     double imag;
+
 
     public Complex(double real, double imag) {
         this.real = real;
@@ -10,14 +11,15 @@ public class Complex {
     }
 
     public static void main(String[] args) {
-        Complex n1 = new Complex(2.3, 4.5),
-                n2 = new Complex(3.4, 5.0),
+        Complex n1 = new Complex(2.3, 4.5), n2 = new Complex(3.4, 5.0),
                 temp;
         temp = add(n1, n2);
+
         System.out.printf("Sum = %.1f + %.1fi", temp.real, temp.imag);
         System.out.println();
         System.out.println();
         System.out.println();
+
 
     }
 

@@ -2,18 +2,24 @@ package com.preflex;
 /**
  * Java Class to Determine if airlines can be moved from
  * airline to another based on network of airline partners
- * Note 123
- * @author
+ * Note 123456
+ * My updates
+ *Test
+ * @authorddsdasd
  */
+
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class AirlineProblem {
 
+public class AirlineProblem {
     public static void main(String[] args) {
         Scanner scannerToReadAirlines = null;
+
+
         try {
             scannerToReadAirlines = new Scanner(new File("airlines.txt"));
         } catch (IOException e) {
@@ -32,15 +38,19 @@ public class AirlineProblem {
                 newAirline = new Airline(airlineNames);
                 airlinesPartnersNetwork.add(newAirline);
             }
+            System.out.println("test");
+
+
             System.out.println(airlinesPartnersNetwork);
             Scanner keyboard = new Scanner(System.in);
             System.out.print("Enter airline miles are on: ");
+            /**/
             String start = keyboard.nextLine();
             System.out.print("Enter goal airline: ");
             String goal = keyboard.nextLine();
+//            System.out.println();
             System.out.println();
-            System.out.println();
-           ArrayList<String> pathForMiles = new ArrayList<String>();
+            ArrayList<String> pathForMiles = new ArrayList<String>();
             ArrayList<String> airlinesVisited = new ArrayList<String>();
             if (canRedeem(start, goal, pathForMiles, airlinesVisited, airlinesPartnersNetwork))
                 System.out.println("Path to redeem miles: " + pathForMiles);
@@ -61,6 +71,7 @@ public class AirlineProblem {
             // don't go into a cycle
             return false;
         else {
+
             // I have not been here and it isn't
             // the goal so check its partners
             // now I have been here
@@ -96,8 +107,8 @@ public class AirlineProblem {
     }
 
     private static class Airline {
-        private String name;
-        private ArrayList<String> partners;
+        private final String name;
+        private final ArrayList<String> partners;
 
         //pre: data != null, data.length > 0
         public Airline(String[] data) {
