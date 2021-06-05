@@ -1,6 +1,6 @@
 package com.preflex;
 
-public class matrix {
+public class MatrixSample {
 
     public static void main(String[] args) {
         int r1 = 2, c1 = 3;
