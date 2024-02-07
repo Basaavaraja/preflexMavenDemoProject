@@ -4,7 +4,8 @@
     <groupId>com.preflex</groupId>
     <artifactId>maven-jar-plugin-example</artifactId>
     <version>5.0.0</version>
-    <name>Maven jar ::  example</name>
+<packaging>jar</packaging>
+         <name>Maven jar ::  example</name>
     <url>http://maven.apache.org</url>
 
     <properties>
